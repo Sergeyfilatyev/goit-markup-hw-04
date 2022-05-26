@@ -36,12 +36,14 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  min-width: 1600px;
 }
 
 /* Header */
 
 .header-section {
   border-bottom: 1px solid #ececec;
+  min-width: 1600px;
 }
 .main-nav {
   display: flex;
@@ -102,6 +104,12 @@ img {
 .contact {
   margin-left: auto;
 }
+.smartfone-icon {
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -126,8 +134,19 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height: 600px;
   background-color: var(--background-dark-color);
   text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(./images/backgroundimage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .title-service {
@@ -161,8 +180,6 @@ img {
 }
 
 /* Features */
-
-/* Заголовок скрыл, используя вот такой способ, посмотрите!  */
 
 .features-main {
   position: absolute;
@@ -249,6 +266,9 @@ img {
 }
 .team-item {
   width: calc((100% - 90px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-item:not(:nth-child(4n)) {
   margin-right: 30px;
@@ -258,9 +278,6 @@ img {
   padding-bottom: 30px;
   text-align: center;
   background-color: var(--background-primary-color);
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-title {
@@ -375,6 +392,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-dark-color);
+  min-width: 1600px;
 }
 .logo.foot {
   margin-left: auto;
