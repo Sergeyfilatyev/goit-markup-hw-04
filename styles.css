@@ -51,9 +51,11 @@ img {
 }
 .navigation {
   display: flex;
+  align-items: center;
 }
 .nav-menu {
   display: flex;
+  align-items: center;
 }
 .contact {
   display: flex;
@@ -326,8 +328,37 @@ img {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
-
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50px;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--white-text-color);
+}
 /* Portfolio menu */
 /* Filter menu */
 .projects-main {
