@@ -10,6 +10,7 @@
   --background-primary-color: #ffffff;
   --background-second-color: #f5f4fa;
   --btn-hover: #188ce8;
+  --fill-icon-color: #afb1b8;
 }
 body {
   background-color: var(--background-primary-color);
@@ -27,8 +28,10 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 1px solid red;
 }
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -60,7 +63,6 @@ img {
 .contact {
   display: flex;
   align-items: center;
-  vertical-align: middle;
 }
 
 .logo {
@@ -108,36 +110,28 @@ img {
 .contact {
   margin-left: auto;
 }
-.smartfone-icon {
-  display: inline-block;
-  width: 10px;
-  height: 16px;
+.envelope {
   margin-right: 10px;
-  transform: translateY(2px);
-  fill: var(--main-color);
 }
-.smartfone-icon:hover,
-.smartfone-icon:focus {
-  fill: var(--accent-color);
-}
-.mail-icon {
-  display: inline-block;
+.envelope-icon {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-  transform: translateY(1px);
   fill: var(--main-color);
 }
-.mail-icon:hover,
-.mail-icon:focus {
-  fill: var(--accent-color);
+.smartphone {
+  margin-right: 10px;
 }
-
+.smartfone-icon {
+  width: 10px;
+  height: 16px;
+  fill: var(--main-color);
+}
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
 .contact-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--main-color);
@@ -147,9 +141,15 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.contact-link:hover,
-.contact-link:focus {
+.contact-link:focus,
+.contact-link:hover {
   color: var(--accent-color);
+}
+.contact-link:focus .envelope-icon,
+.contact-link:hover .envelope-icon,
+.contact-link:focus .smartfone-icon,
+.contact-link:hover .smartfone-icon {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -160,6 +160,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  min-width: 1600px;
   height: 600px;
   background-color: var(--background-dark-color);
   text-align: center;
@@ -221,12 +222,14 @@ img {
   flex-wrap: wrap;
 }
 .features-icon {
+  margin: 0 auto;
   width: 70px;
   height: 70px;
 }
-.bgr-icon {
+.bgr-features-icon {
   background-color: var(--background-second-color);
-  padding: 25px 102px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
   border-radius: 4px;
 }
@@ -255,6 +258,7 @@ img {
 }
 
 /* Work */
+
 .work.section {
   padding-top: 0;
 }
@@ -353,14 +357,60 @@ img {
 .social-icon {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: var(--fill-icon-color);
 }
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--white-text-color);
 }
+
+/* Clients */
+
+.clients-title {
+  margin: 0 0 50px 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.clients-item {
+  width: calc((100% - 150px) / 6);
+}
+.clients-item:not(:nth-child(6n)) {
+  margin-right: 30px;
+}
+.clents-link {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center;
+  display: block;
+  border: 1px solid var(--fill-icon-color);
+  border-radius: 4px;
+}
+.clients-icon {
+  margin: 0 auto;
+  fill: var(--fill-icon-color);
+}
+.clents-link:focus,
+.clents-link:hover {
+  border: 1px solid var(--accent-color);
+}
+.clents-link:hover .clients-icon,
+.clents-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
 /* Portfolio menu */
 /* Filter menu */
+
 .projects-main {
   position: absolute;
   width: 1px;
@@ -375,6 +425,8 @@ img {
 }
 .portfolio-menu {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   margin-bottom: 50px;
 }
@@ -384,7 +436,7 @@ img {
 .portfolio-btn {
   display: inline-block;
   padding: 6px 22px;
-  align-items: center;
+  text-align: center;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
