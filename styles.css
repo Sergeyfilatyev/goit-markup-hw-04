@@ -29,8 +29,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -38,14 +37,12 @@ svg {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  min-width: 1600px;
 }
 
 /* Header */
 
 .header-section {
   border-bottom: 1px solid #ececec;
-  min-width: 1600px;
 }
 .main-nav {
   display: flex;
@@ -109,22 +106,6 @@ svg {
 .contact {
   margin-left: auto;
 }
-.envelope {
-  margin-right: 10px;
-}
-.envelope-icon {
-  width: 16px;
-  height: 12px;
-  fill: var(--main-color);
-}
-.smartphone {
-  margin-right: 10px;
-}
-.smartfone-icon {
-  width: 10px;
-  height: 16px;
-  fill: var(--main-color);
-}
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -144,10 +125,12 @@ svg {
 .contact-link:hover {
   color: var(--accent-color);
 }
-.contact-link:focus .envelope-icon,
-.contact-link:hover .envelope-icon,
-.contact-link:focus .smartfone-icon,
-.contact-link:hover .smartfone-icon {
+.contact-icon {
+  fill: var(--main-color);
+  margin-right: 10px;
+}
+.contact-link:focus .contact-icon,
+.contact-link:hover .contact-icon {
   fill: var(--accent-color);
 }
 
@@ -220,12 +203,10 @@ svg {
   display: flex;
   flex-wrap: wrap;
 }
-.features-icon {
-  margin: 0 auto;
-  width: 70px;
-  height: 70px;
-}
+
 .bgr-features-icon {
+  display: flex;
+  justify-content: center;
   background-color: var(--background-second-color);
   padding-top: 25px;
   padding-bottom: 25px;
@@ -505,7 +486,6 @@ svg {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-dark-color);
-  min-width: 1600px;
 }
 .logo.foot {
   margin-left: auto;
