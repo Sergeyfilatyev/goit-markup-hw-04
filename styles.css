@@ -48,6 +48,18 @@ a {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Header */
 
@@ -192,18 +204,6 @@ a {
 
 /* Features */
 
-.features-main {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -381,21 +381,10 @@ a {
 .clents-link:focus .clients-icon {
   fill: var(--accent-color);
 }
+
 /* Portfolio menu */
 /* Filter menu */
 
-.projects-main {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .portfolio-menu {
   display: flex;
   flex-wrap: wrap;
