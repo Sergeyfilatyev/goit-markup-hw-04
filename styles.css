@@ -168,6 +168,7 @@ a {
     url(./images/backgroundimage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -363,8 +364,8 @@ a {
 .clents-link {
   padding-top: 16px;
   padding-bottom: 16px;
-  text-align: center;
-  display: block;
+  justify-content: center;
+  display: flex;
   border: 1px solid var(--fill-icon-color);
   border-radius: 4px;
 }
@@ -492,13 +493,12 @@ a {
 }
 .footer-div {
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
 }
 .footer-right {
   margin-left: 70px;
 }
 .footer-social-title {
-  margin-top: 12px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
